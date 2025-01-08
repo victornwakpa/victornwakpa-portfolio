@@ -6,11 +6,8 @@ interface IconProps extends SVGProps<SVGSVGElement> {
 }
 
 // Import all icons
-import BootstrapIcon from './icons/Bootstrap'
 import DiscordIcon from './icons/Discord'
 import GitHubIcon from './icons/GitHub'
-import MongoDBIcon from './icons/MongoDB'
-import DockerIcon from './icons/Docker'
 import NextJSIcon from './icons/NextJS'
 import NodeJSIcon from './icons/NodeJS'
 import ReactIcon from './icons/React'
@@ -27,21 +24,6 @@ type Tag = {
 
 // Define the TAGS object directly with its type
 const TAGS = {
-  BOOTSTRAP: {
-    name: 'Bootstrap',
-    class: 'bg-[#7E13F8] text-white',
-    icon: BootstrapIcon
-  },
-  MONGODB: {
-    name: 'MongoDB',
-    class: 'bg-[#13AA52] text-white',
-    icon: MongoDBIcon
-  },
-  DOCKER: {
-    name: 'Docker',
-    class: 'bg-[#00D8FF1a] dark:text-white text-black',
-    icon: DockerIcon
-  },
   NEXT: {
     name: 'Next.js',
     class: 'bg-black text-white',
