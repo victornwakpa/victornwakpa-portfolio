@@ -6,7 +6,6 @@ interface IconProps extends SVGProps<SVGSVGElement> {
 }
 
 // Import all icons
-import AngularIcon from './icons/Angular'
 import BootstrapIcon from './icons/Bootstrap'
 import DiscordIcon from './icons/Discord'
 import GitHubIcon from './icons/GitHub'
@@ -28,11 +27,6 @@ type Tag = {
 
 // Define the TAGS object directly with its type
 const TAGS = {
-  ANGULAR: {
-    name: 'Angular',
-    class: 'bg-[#ffffff1a] dark:text-white text-black',
-    icon: AngularIcon
-  },
   BOOTSTRAP: {
     name: 'Bootstrap',
     class: 'bg-[#7E13F8] text-white',

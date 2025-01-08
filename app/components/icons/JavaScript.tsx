@@ -1,10 +1,6 @@
 import { SVGProps } from "react";
 
-interface JavascriptProps extends SVGProps<SVGSVGElement> {
-  // You can add custom props here if needed
-}
-
-const Javascript = ({ className, ...props }: JavascriptProps) => {
+const Javascript = ({ className, ...props }: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

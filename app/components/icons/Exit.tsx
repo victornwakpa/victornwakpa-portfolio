@@ -1,10 +1,6 @@
 import { SVGProps } from "react";
 
-interface ExitIconProps extends SVGProps<SVGSVGElement> {
-  // You can add custom props here if needed
-}
-
-const ExitIcon = ({ className, ...props }: ExitIconProps) => {
+const ExitIcon = ({ className, ...props }: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

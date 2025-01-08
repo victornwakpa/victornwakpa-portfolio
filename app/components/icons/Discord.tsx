@@ -1,10 +1,6 @@
 import { SVGProps } from "react";
 
-interface DiscordIconProps extends SVGProps<SVGSVGElement> {
-  // You can add custom props here if needed
-}
-
-const DiscordIcon = ({ className, ...props }: DiscordIconProps) => {
+const DiscordIcon = ({ className, ...props }: SVGProps<SVGSVGElement>) => {
   return (
     <svg
     viewBox="0 0 256 199"

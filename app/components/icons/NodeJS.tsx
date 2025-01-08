@@ -1,10 +1,6 @@
 import { SVGProps } from "react";
 
-interface NodeJSIconProps extends SVGProps<SVGSVGElement> {
-  // You can add custom props here if needed
-}
-
-const NodeJSIcon = ({ className, ...props }: NodeJSIconProps) => {
+const NodeJSIcon = ({ className, ...props }: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       viewBox="0 0 256 289"

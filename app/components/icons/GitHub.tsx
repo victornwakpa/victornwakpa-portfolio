@@ -1,10 +1,6 @@
 import { SVGProps } from "react";
 
-interface GitHubIconProps extends SVGProps<SVGSVGElement> {
-  // You can add custom props here if needed
-}
-
-const GitHubIcon = ({ className, ...props }: GitHubIconProps) => {
+const GitHubIcon = ({ className, ...props }: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       viewBox="0 0 256 250"

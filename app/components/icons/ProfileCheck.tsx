@@ -1,10 +1,6 @@
 import { SVGProps } from "react";
 
-interface ProfileCheckProps extends SVGProps<SVGSVGElement> {
-  // You can add custom props here if needed
-}
-
-const ProfileCheck = ({ className, ...props }: ProfileCheckProps) => {
+const ProfileCheck = ({ className, ...props }: SVGProps<SVGSVGElement>) => {
   return (
     <svg
     width="24"

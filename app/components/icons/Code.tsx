@@ -1,10 +1,6 @@
 import { SVGProps } from "react";
 
-interface CodeIconProps extends SVGProps<SVGSVGElement> {
-  // You can add custom props here if needed
-}
-
-const CodeIcon = ({ className, ...props }: CodeIconProps) => {
+const CodeIcon = ({ className, ...props }: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
