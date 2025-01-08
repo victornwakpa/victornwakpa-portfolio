@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        Roboto: "Roboto, sans-serif",
+        Onest: "Onest, serif",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
