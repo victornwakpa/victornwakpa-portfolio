@@ -1,7 +1,8 @@
 "use client";
 
+import React, { useState } from 'react';
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { Menu, X } from 'lucide-react';
 
 interface NavItem {
   label: string;
@@ -18,7 +19,7 @@ const navItems: NavItem[] = [
 function useActiveSection() {
   const [activeSection, setActiveSection] = useState("");
 
-  useEffect(() => {
+  React.useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -42,36 +43,41 @@ function useActiveSection() {
   return activeSection;
 }
 
-
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const activeSection = useActiveSection();
 
- 
-
   const handleDownload = () => {
-    // Create a link element
     const link = document.createElement("a");
     link.href = "/Resume-victor-nwakpa.pdf";
-    link.setAttribute("download", "Resume-victor-nwakpa.pdf"); // This sets the download attribute
+    link.setAttribute("download", "Resume-victor-nwakpa.pdf");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   return (
-    <header className="container fixed left-0 right-0 top-5 z-50 mx-auto w-fit rounded-full bg-black/60 py-2 shadow-[0_0px_10px_rgba(100,150,169,0.8)] backdrop-blur-md transition-all duration-300">
+    <header className="container fixed left-0 right-0 top-5 z-50 mx-auto w-full lg:w-fit rounded-full bg-black/60 py-2 shadow-[0_0px_10px_rgba(100,150,169,0.8)] backdrop-blur-md transition-all duration-300">
       <div className="mx-auto max-w-4xl px-3">
-        <nav className="flex items-center justify-between gap-12">
+        <nav className="flex items-center justify-between gap-4 md:gap-12">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <span className="py- rounded-full bg-gray-100 px-4 text-2xl font-bold text-black">
+              <span className="rounded-full bg-gray-100 px-4 py-1 text-2xl font-bold text-black">
                 VN
               </span>
             </Link>
           </div>
 
-          {/* Navigation Items */}
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden text-gray-200 hover:text-gray-300"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+
+          {/* Desktop Navigation */}
           <div className="hidden items-center space-x-8 md:flex">
             {navItems.map((item) => (
               <Link
@@ -98,6 +104,28 @@ export default function Header() {
             </button>
           </div>
         </nav>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="absolute left-0 right-0 top-full mt-2 rounded-lg bg-black/95 p-4 backdrop-blur-lg md:hidden">
+            <div className="flex flex-col space-y-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`rounded-lg px-4 py-2 font-semibold transition-colors ${
+                    activeSection === item.href.slice(1)
+                      ? "bg-gray-200 text-gray-900"
+                      : "text-gray-200 hover:text-gray-900 hover:bg-gray-200"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );
