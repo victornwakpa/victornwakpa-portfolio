@@ -6,7 +6,7 @@ import SocialLink from "./SocialLink";
 export default function HeroSection() {
   return (
     <div id="hero">
-      <div className="container mx-auto w-full px-5 pb-8 pt-16 md:max-w-2xl md:pb-16 md:pt-48 lg:max-w-4xl">
+      <div className="container mx-auto w-full px-5 pb-8 pt-32 md:max-w-2xl md:pb-16 md:pt-48 lg:max-w-4xl">
         <img
           className="mb-4 size-12 rounded-full"
           src="/victornwakpa-1.jpeg"
