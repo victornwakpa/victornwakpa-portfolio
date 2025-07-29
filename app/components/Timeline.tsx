@@ -37,9 +37,9 @@ export default function Timeline() {
             backgroundColor: "rgb(255, 255, 255, 0.06)",
             color: "#fff",
             backdropFilter: "blur(20px)",
-            fontSize: "14px"
+            fontSize: "14px",
           }}
-          date="Apr 2024 - Nov 2024"
+          date="Apr 2024 - June 2025"
           iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
           icon={<MdOutlineWork />}
         >
@@ -71,9 +71,14 @@ export default function Timeline() {
         >
           <h3 className="vertical-timeline-element-title">Course Instructor</h3>
           <h4 className="vertical-timeline-element-subtitle">
-          Bestsoft Technologies, Nigeria
+            Bestsoft Technologies, Nigeria
           </h4>
-          <p>At Bestsoft Technology, I guided IT industrial training students as an HTML and CSS instructor. I'm proud to have facilitated clear comprehension of web technology, resulting in excellent grades for these students.</p>
+          <p>
+            At Bestsoft Technology, I guided IT industrial training students as
+            an HTML and CSS instructor. I'm proud to have facilitated clear
+            comprehension of web technology, resulting in excellent grades for
+            these students.
+          </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -87,11 +92,19 @@ export default function Timeline() {
           iconClassName={"String"}
           icon={<MdOutlineWork />}
         >
-          <h3 className="vertical-timeline-element-title">Web Development Intern</h3>
+          <h3 className="vertical-timeline-element-title">
+            Web Development Intern
+          </h3>
           <h4 className="vertical-timeline-element-subtitle">
-          NBMC Technologies, Nigeria
+            NBMC Technologies, Nigeria
           </h4>
-          <p>During my impactful industrial training at NBMC, I immersed myself in the world of web technologies, mastering the art of crafting innovative solutions. Collaborating on dynamic group projects not only refined my technical skills but also enriched my communication and teamwork abilities.</p>
+          <p>
+            During my impactful industrial training at NBMC, I immersed myself
+            in the world of web technologies, mastering the art of crafting
+            innovative solutions. Collaborating on dynamic group projects not
+            only refined my technical skills but also enriched my communication
+            and teamwork abilities.
+          </p>
         </VerticalTimelineElement>
       </VerticalTimeline>
     </div>
